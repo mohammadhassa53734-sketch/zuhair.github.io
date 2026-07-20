@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>মোহাম্মদ জুহাইর | পোর্টফোলিও ও রিসার্চ</title>
+    <title>মোহাম্মদ জুহাইর | পোর্টফোলিও ও গ্যালারি</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         
-        /* নড়াচড়া করা ডার্ক ব্যাকগ্রাউন্ড (Animated Gradient Background) */
         body {
             background: linear-gradient(-45deg, #0f172a, #1e1b4b, #0f172a, #020617);
             background-size: 400% 400%;
@@ -61,7 +60,6 @@
         h1 { font-size: 26px; color: #ffffff; margin-bottom: 5px; }
         .tagline { color: #38bdf8; font-size: 15px; font-weight: 500; margin-bottom: 15px; }
         
-        /* আলাদা সেকশন ডিজাইন */
         .section-title {
             font-size: 18px;
             color: #38bdf8;
@@ -83,29 +81,19 @@
             border-radius: 12px;
             padding: 18px;
             text-align: left;
-            transition: transform 0.3s ease;
         }
 
-        .content-card:hover {
-            transform: translateY(-3px);
-            border-color: rgba(56, 189, 248, 0.5);
+        .content-card h3 { font-size: 16px; color: #f1f5f9; margin-bottom: 12px; }
+        
+        /* সরাসরি ছবি প্রদর্শনের স্টাইল */
+        .website-image {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 5px;
         }
-
-        .content-card h3 { font-size: 16px; color: #f1f5f9; margin-bottom: 8px; }
-        .content-card p { font-size: 13px; color: #94a3b8; margin-bottom: 12px; }
-
-        .btn {
-            display: inline-block;
-            background: #38bdf8;
-            color: #0f172a;
-            padding: 6px 14px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 600;
-        }
-
-        .btn:hover { background: #0ea5e9; color: #fff; }
 
         .footer {
             border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -121,39 +109,31 @@
 
     <div class="container">
         <!-- প্রোফাইল অংশ -->
+        .
         <div class="profile-header">
             <div class="avatar">জেড</div>
             <h1>মোহাম্মদ জুহাইর</h1>
             <div class="tagline">রিসার্চার | কন্টেন্ট ক্রিয়েটর</div>
-            <p style="font-size: 14px; color: #94a3b8;">আমার ব্যক্তিগত পোর্টফোলিও ও গবেষণা পাতার সংগ্রহশালায় স্বাগতম।</p>
+            <p style="font-size: 14px; color: #94a3b8;">আমার ব্যক্তিগত পোর্টফোলিও ও ছবি গ্যালারি।</p>
         </div>
 
-        <!-- ১. রিসার্চ পেপার সেকশন -->
-        <div class="section-title">📄 রিসার্চ পেপার ও ডকুমেন্টস</div>
-        <div class="card-grid">
-            <div class="content-card">
-                <h3>রিসার্চ শিরোনাম ১ (এখানে নাম লিখবেন)</h3>
-                <p>আপনার গবেষণার সংক্ষিপ্ত বিবরণ বা সারসংক্ষেপ এখানে লিখুন।</p>
-                <a href="এখানে_গুগল_ড্রাইভের_পিডিএফ_লিংক_দিন" class="btn" target="_blank">PDF পড়ুন / ডাউনলোড</a>
-            </div>
-        </div>
-
-        <!-- ২. ছবি গ্যালারি সেকশন -->
+        <!-- 📸 ছবি গ্যালারি সেকশন -->
         <div class="section-title">📸 ছবি গ্যালারি</div>
         <div class="card-grid">
+            
+            <!-- ছবি ১ -->
             <div class="content-card">
-                <h3>ছবির শিরোনাম বা ইভেন্ট</h3>
-                <p>ছবি সম্পর্কে ছোট একটি বর্ণনা। (পরে এখানে ছবি যুক্ত করা হবে)</p>
+                <h3>ছবির শিরোনাম ১</h3>
+                <!-- নিচের src="" এর ভেতরে আপনার ছবির ডাইরেক্ট লিংক বসাবেন -->
+                <img src="https://drive.google.com/file/d/19jrAturPsyGjEu1Ba0st7wfbABP0WIgc/view?usp=drivesdk">
             </div>
-        </div>
 
-        <!-- ৩. ভিডিও সেকশন -->
-        <div class="section-title">🎥 ভিডিও সমূহ</div>
-        <div class="card-grid">
+            <!-- ছবি ২ -->
             <div class="content-card">
-                <h3>ভিডিওর শিরোনাম</h3>
-                <p>আপনার ইউটিউব ভিডিও বা প্রজেক্টের বিবরণ।</p>
+                <h3>ছবির শিরোনাম ২</h3>
+                <img src="https://drive.google.com/file/d/1NVprCK3lrzVjKKpViT3kkd5aX_Bqlhsn/view?usp=drivesdk">
             </div>
+
         </div>
 
         <!-- ফুটার -->

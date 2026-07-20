@@ -3,53 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>জুহাইর | পারসোনাল পোর্টফোলিও & রিসার্চ</title>
+    <title>মোহাম্মদ জুহাইর | পোর্টফোলিও ও রিসার্চ</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #0f172a; color: #f8fafc; line-height: 1.6; padding: 20px 10px; min-height: 100vh; display: flex; justify-content: center; align-items: center; }
         
-        .container { max-width: 700px; width: 100%; background: #1e293b; border-radius: 20px; padding: 40px 25px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); text-align: center; border: 1px solid #334155; }
+        /* নড়াচড়া করা ডার্ক ব্যাকগ্রাউন্ড (Animated Gradient Background) */
+        body {
+            background: linear-gradient(-45deg, #0f172a, #1e1b4b, #0f172a, #020617);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #f8fafc;
+            line-height: 1.6;
+            padding: 20px 10px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 750px;
+            width: 100%;
+            background: rgba(30, 41, 59, 0.75);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 30px 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: #fff;
+            font-weight: bold;
+            margin: 0 auto 15px auto;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+        }
+
+        h1 { font-size: 26px; color: #ffffff; margin-bottom: 5px; }
+        .tagline { color: #38bdf8; font-size: 15px; font-weight: 500; margin-bottom: 15px; }
         
-        .avatar { width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #38bdf8, #818cf8); display: flex; align-items: center; justify-content: center; font-size: 36px; color: #fff; font-weight: bold; margin: 0 auto 20px auto; box-shadow: 0 0 15px rgba(56, 189, 248, 0.4); }
-        
-        h1 { font-size: 28px; color: #ffffff; margin-bottom: 5px; }
-        .tagline { color: #38bdf8; font-size: 16px; font-weight: 500; margin-bottom: 15px; }
-        
-        .badge { background: rgba(56, 189, 248, 0.1); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); padding: 6px 16px; border-radius: 50px; display: inline-block; font-size: 13px; font-weight: 600; margin-bottom: 25px; }
-        
-        p { color: #94a3b8; font-size: 15px; line-height: 1.7; margin-bottom: 30px; }
-        
-        .card { background: #0f172a; border-radius: 12px; padding: 20px; border: 1px solid #334155; text-align: left; margin-bottom: 25px; }
-        .card h3 { color: #f1f5f9; font-size: 16px; margin-bottom: 8px; }
-        .card p { color: #64748b; font-size: 13px; margin-bottom: 0; }
-        
-        .footer { border-top: 1px solid #334155; padding-top: 20px; font-size: 13px; color: #64748b; }
+        /* আলাদা সেকশন ডিজাইন */
+        .section-title {
+            font-size: 18px;
+            color: #38bdf8;
+            border-bottom: 2px solid rgba(56, 189, 248, 0.3);
+            padding-bottom: 5px;
+            margin: 25px 0 15px 0;
+            text-align: left;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .content-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 18px;
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+
+        .content-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(56, 189, 248, 0.5);
+        }
+
+        .content-card h3 { font-size: 16px; color: #f1f5f9; margin-bottom: 8px; }
+        .content-card p { font-size: 13px; color: #94a3b8; margin-bottom: 12px; }
+
+        .btn {
+            display: inline-block;
+            background: #38bdf8;
+            color: #0f172a;
+            padding: 6px 14px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .btn:hover { background: #0ea5e9; color: #fff; }
+
+        .footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 30px;
+            padding-top: 15px;
+            font-size: 12px;
+            color: #64748b;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- প্রোফাইল আইকন/অবতার -->
-        <div class="avatar">জেড</div>
+        <!-- প্রোফাইল অংশ -->
+        <div class="profile-header">
+            <div class="avatar">জেড</div>
+            <h1>মোহাম্মদ জুহাইর</h1>
+            <div class="tagline">রিসার্চার | কন্টেন্ট ক্রিয়েটর</div>
+            <p style="font-size: 14px; color: #94a3b8;">আমার ব্যক্তিগত পোর্টফোলিও ও গবেষণা পাতার সংগ্রহশালায় স্বাগতম।</p>
+        </div>
 
-        <!-- নাম ও খেতাব -->
-        <h1>মোহাম্মদ জুহাইর</h1>
-        <div class="tagline">গবেষক & কন্টেন্ট ক্রিয়েটর</div>
-        
-        <div class="badge">✨ ওয়েবসাইট আপডেট হচ্ছে</div>
+        <!-- ১. রিসার্চ পেপার সেকশন -->
+        <div class="section-title">📄 রিসার্চ পেপার ও ডকুমেন্টস</div>
+        <div class="card-grid">
+            <div class="content-card">
+                <h3>রিসर्च শিরোনাম ১ (এখানে নাম লিখবেন)</h3>
+                <p>আপনার গবেষণার সংক্ষিপ্ত বিবরণ বা সারসংক্ষেপ এখানে লিখুন।</p>
+                <a href="এখানে_গুগল_ড্রাইভের_পিডিএফ_লিংক_দিন" class="btn" target="_blank">PDF পড়ুন / ডাউনলোড</a>
+            </div>
+        </div>
 
-        <!-- বিবরণ -->
-        <p>আমার পারসোনাল পোর্টফোলিও এবং রিসার্চ ওয়েবসাইটে আপনাকে স্বাগতম! এখানে খুব শীঘ্রই আমার গবেষণা পত্রসমূহ, ছবি এবং ভিডিও প্রকাশিত হতে যাচ্ছে।</p>
+        <!-- ২. ছবি গ্যালারি সেকশন -->
+        <div class="section-title">📸 ছবি গ্যালারি</div>
+        <div class="card-grid">
+            <div class="content-card">
+                <h3>ছবির শিরোনাম বা ইভেন্ট</h3>
+                <p>ছবি সম্পর্কে ছোট একটি বর্ণনা। (পরে এখানে ছবি যুক্ত করা হবে)</p>
+            </div>
+        </div>
 
-        <!-- ভবিষ্যৎ সেকশনের আগাম ধারণা -->
-        <div class="card">
-            <h3>📂 আসন্ন ফিচারসমূহ:</h3>
-            <p>• রিসার্চ পেপার & পিডিএফ ডাউনলোড<br>• গ্যালাক্সির মতো ফটো গ্যালারি<br>• ভিডিও টিউটোরিয়াল ও প্রেজেন্টেশন</p>
+        <!-- ৩. ভিডিও সেকশন -->
+        <div class="section-title">🎥 ভিডিও সমূহ</div>
+        <div class="card-grid">
+            <div class="content-card">
+                <h3>ভিডিওর শিরোনাম</h3>
+                <p>আপনার ইউটিউব ভিডিও বা প্রজেক্টের বিবরণ।</p>
+            </div>
         </div>
 
         <!-- ফুটার -->
         <div class="footer">
-            &copy; ২০২৬ জুহাইর | সর্বস্বত্ব সংরক্ষিত
+            &copy; ২০২৬ মোহাম্মদ জুহাইর | সর্বস্বত্ব সংরক্ষিত
         </div>
     </div>
 

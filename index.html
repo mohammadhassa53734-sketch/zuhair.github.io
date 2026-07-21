@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>মোহাম্মদ জুহাইর | পোর্টফোলিও ও রিসার্চ</title>
+    <title>মোহাম্মদ জুহাইর | পোর্টফোলিও</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; scroll-behavior: smooth; }
         
+        /* আপনার কালার প্যালেট অনুযায়ী এনিমেটেড ব্যাকগ্রাউন্ড */
         body {
-            background: linear-gradient(-45deg, #0f172a, #1e1b4b, #0f172a, #020617);
+            background: linear-gradient(-45deg, #360212, #9F002B, #360212, #89547C);
             background-size: 400% 400%;
             animation: gradientBG 15s ease infinite;
             color: #f8fafc;
@@ -29,43 +30,76 @@
         .container {
             max-width: 750px;
             width: 100%;
-            background: rgba(30, 41, 59, 0.75);
-            backdrop-filter: blur(12px);
+            background: rgba(54, 2, 18, 0.85);
+            backdrop-filter: blur(15px);
             border-radius: 20px;
             padding: 30px 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(215, 145, 190, 0.2);
         }
 
         .profile-header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         .avatar {
-            width: 90px;
-            height: 90px;
+            width: 95px;
+            height: 95px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            background: linear-gradient(135deg, #FE5457, #9973A0);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
+            font-size: 36px;
             color: #fff;
             font-weight: bold;
             margin: 0 auto 15px auto;
-            box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+            box-shadow: 0 0 25px rgba(254, 84, 87, 0.5);
+            border: 2px solid #D791BE;
         }
 
         h1 { font-size: 26px; color: #ffffff; margin-bottom: 5px; }
-        .tagline { color: #38bdf8; font-size: 15px; font-weight: 500; margin-bottom: 15px; }
+        .tagline { color: #D791BE; font-size: 15px; font-weight: 500; margin-bottom: 20px; }
         
+        /* ৩টি রঙিন নেভিগেশন বাটন বক্স */
+        .nav-boxes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .nav-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 8px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .nav-box:active { transform: scale(0.95); }
+
+        .bg-research { background: linear-gradient(135deg, #FE5457, #9F002B); }
+        .bg-gallery { background: linear-gradient(135deg, #9F002B, #360212); border: 1px solid rgba(215, 145, 190, 0.3); }
+        .bg-video { background: linear-gradient(135deg, #89547C, #9973A0); }
+
+        .nav-box span { font-size: 18px; margin-bottom: 4px; }
+
+        /* সেকশন হেডার */
         .section-title {
             font-size: 18px;
-            color: #38bdf8;
-            border-bottom: 2px solid rgba(56, 189, 248, 0.3);
-            padding-bottom: 5px;
-            margin: 25px 0 15px 0;
+            color: #D791BE;
+            border-bottom: 2px solid rgba(215, 145, 190, 0.3);
+            padding-bottom: 6px;
+            margin: 30px 0 15px 0;
             text-align: left;
         }
 
@@ -76,29 +110,29 @@
         }
 
         .content-card {
-            background: rgba(15, 23, 42, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(30, 2, 10, 0.6);
+            border: 1px solid rgba(215, 145, 190, 0.15);
             border-radius: 12px;
             padding: 18px;
             text-align: left;
         }
 
         .content-card h3 { font-size: 16px; color: #f1f5f9; margin-bottom: 8px; }
-        .content-card p { font-size: 13px; color: #94a3b8; margin-bottom: 12px; }
+        .content-card p { font-size: 13px; color: #D791BE; margin-bottom: 12px; }
 
         .website-image {
             width: 100%;
-            max-height: 300px;
+            max-height: 320px;
             object-fit: cover;
             border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(215, 145, 190, 0.2);
             margin-top: 5px;
         }
 
         .btn {
             display: inline-block;
-            background: #38bdf8;
-            color: #0f172a;
+            background: #FE5457;
+            color: #ffffff;
             padding: 6px 14px;
             border-radius: 6px;
             text-decoration: none;
@@ -107,11 +141,11 @@
         }
 
         .footer {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            margin-top: 30px;
+            border-top: 1px solid rgba(215, 145, 190, 0.2);
+            margin-top: 35px;
             padding-top: 15px;
             font-size: 12px;
-            color: #64748b;
+            color: #9973A0;
             text-align: center;
         }
     </style>
@@ -124,35 +158,44 @@
             <div class="avatar">জেড</div>
             <h1>মোহাম্মদ জুহাইর</h1>
             <div class="tagline">রিসার্চার | কন্টেন্ট ক্রিয়েটর</div>
-            <p style="font-size: 14px; color: #94a3b8;">আমার ব্যক্তিগত পোর্টফোলিও, গবেষণা ও ছবি গ্যালারি।</p>
+            <p style="font-size: 14px; color: #e2e8f0;">আমার ব্যক্তিগত পোর্টফোলিও ও গবেষণা পাতা</p>
         </div>
 
-        <!-- ১. রিসার্চ পেপার সেকশন -->
-        <div class="section-title">📄 রিসার্চ পেপার ও ডকুমেন্টস</div>
+        <!-- 🎨 ৩টি রঙিন অপশন বাটন (নেভিগেশন) -->
+        <div class="nav-boxes">
+            <a href="#research" class="nav-box bg-research">
+                <span>📄</span> রিসার্চ
+            </a>
+            <a href="#gallery" class="nav-box bg-gallery">
+                <span>📸</span> গ্যালারি
+            </a>
+            <a href="#video" class="nav-box bg-video">
+                <span>🎥</span> ভিডিও
+            </a>
+        </div>
+
+        <!-- ১. রিসার্চ সেকশন -->
+        <div id="research" class="section-title">📄 রিসার্চ পেপার ও ডকুমেন্টস</div>
         <div class="card-grid">
             <div class="content-card">
                 <h3>রিসার্চ পেপারের নাম</h3>
-                <p>আপনার গবেষণার সংক্ষিপ্ত বিবরণ বা সারসংক্ষেপ এখানে থাকবে।</p>
+                <p>আপনার গবেষণার সংক্ষিপ্ত বিবরণ এখানে থাকবে।</p>
                 <a href="#" class="btn">PDF পড়ুন / ডাউনলোড</a>
             </div>
         </div>
 
-        <!-- ২. 📸 ছবি গ্যালারি সেকশন -->
-        <div class="section-title">📸 ছবি গ্যালারি</div>
+        <!-- ২. ছবি গ্যালারি সেকশন -->
+        <div id="gallery" class="section-title">📸 ছবি গ্যালারি</div>
         <div class="card-grid">
             <div class="content-card">
                 <h3>গ্যালারি ছবি ১</h3>
-                <img src="https://i.postimg.cc/T1j4p0Hb/c-HJpdm-F0ZS9sci9pb-WFn-ZXMvd2Vic2l0ZS8y-MDI0LTEw-L3Jhd3Bpe-GVs-X29m-Zmlj-ZV8z-MF9ib-GFja19i-YWNr-Z3.jpg" alt="ছবি ১" class="website-image">
-            </div>
-
-            <div class="content-card">
-                <h3>গ্যালারি ছবি ২</h3>
-                <img src="https://i.postimg.cc/bNBQ1kcT/pngtree-red-dots-in-space-lights-in-dark-red-light-bulbs-lot-image-15661963.jpg" alt="ছবি ২" class="website-image">
+                <!-- আপনার ছবির ডায়রেক্ট লিংকটি নিচের src="" এর ভেতরে বসাবেন -->
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800" alt="ছবি ১" class="website-image">
             </div>
         </div>
 
-        <!-- ৩. 🎥 ভিডিও সেকশন -->
-        <div class="section-title">🎥 ভিডিও সমূহ</div>
+        <!-- ৩. ভিডিও সেকশন -->
+        <div id="video" class="section-title">🎥 ভিডিও সমূহ</div>
         <div class="card-grid">
             <div class="content-card">
                 <h3>প্রজেক্ট প্রেজেন্টেশন / ভিডিও</h3>
